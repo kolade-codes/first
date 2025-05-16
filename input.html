@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+</head>
+<body>
+    <form id="addForm">
+        <label for="num1">Number 1: </label>
+        <input type="number" id="num1" name="num1" required placeholder="Enter first number"><br>
+        <label for="num1">Number 2: </label>
+        <input type="number" id="num2" name="num2" required placeholder="Enter second number"><br>
+        <label for="num1">Result </label>
+        <input type="number" id="result" name="result" readonly><br>
+        <button id="addBtn" type="button">Submit</button>
+    </form>
+
+    <div class="log"></div>
+
+    <script>
+        let form = document.getElementById('addForm');
+        let num1Input = document.getElementById('num1');
+        let num2Input = document.getElementById('num2');
+        let resultInput = document.getElementById('result');
+        let logDiv = document.getElementById('log');
+
+        addBtn.addEventListener('click', function(){
+            let num1 = parseInt(num1Input.value);
+            let num2 = parseInt(num2Input.value);
+              let sum = num1 + num2;
+              resultInput.value = sum;
+              console.log(sum);
+        });
+    </script>
+</body>
+</html>
